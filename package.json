@@ -1,0 +1,76 @@
+{
+  "name": "codespaces-ai-cli-manager",
+  "displayName": "Codespaces AI CLI Manager",
+  "description": "Installs, updates, and launches Antigravity, OpenClaude, and OpenCode in GitHub Codespaces.",
+  "version": "0.1.0",
+  "publisher": "ren42377",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ren42377/codespaces-ai-cli-manager.git"
+  },
+  "homepage": "https://github.com/Ren42377/codespaces-ai-cli-manager#readme",
+  "bugs": {
+    "url": "https://github.com/Ren42377/codespaces-ai-cli-manager/issues"
+  },
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "codespaces",
+    "antigravity",
+    "openclaude",
+    "opencode",
+    "cli"
+  ],
+  "extensionKind": [
+    "workspace"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codespacesAiCliManager.checkStatus",
+        "title": "AI CLI Manager: Check Status"
+      },
+      {
+        "command": "codespacesAiCliManager.updateAll",
+        "title": "AI CLI Manager: Update All"
+      },
+      {
+        "command": "codespacesAiCliManager.reinstall",
+        "title": "AI CLI Manager: Reinstall CLI"
+      },
+      {
+        "command": "codespacesAiCliManager.openAntigravity",
+        "title": "AI CLI Manager: Open Antigravity"
+      },
+      {
+        "command": "codespacesAiCliManager.openOpenClaude",
+        "title": "AI CLI Manager: Open OpenClaude"
+      },
+      {
+        "command": "codespacesAiCliManager.openOpenCode",
+        "title": "AI CLI Manager: Open OpenCode"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "check": "tsc -p . --noEmit",
+    "test": "npm run compile && node --test --test-isolation=none out/test/*.test.js",
+    "package": "npm run compile && vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.95.0",
+    "@vscode/vsce": "^3.6.0",
+    "typescript": "^5.7.0"
+  }
+}

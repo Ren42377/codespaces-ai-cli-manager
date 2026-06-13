@@ -1,0 +1,10 @@
+.git/**
+.github/**
+.vscode/**
+install.sh
+src/**
+node_modules/**
+out/test/**
+out/**/*.map
+*.vsix
+tsconfig.json
