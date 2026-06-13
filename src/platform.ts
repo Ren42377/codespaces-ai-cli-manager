@@ -21,7 +21,7 @@ export const cliDefinitions: readonly CliDefinition[] = [
     id: "opencode",
     label: "OpenCode",
     executable: "opencode",
-    installCommand: "curl -fsSL https://opencode.ai/install | bash",
+    installCommand: "rm -f \"$HOME/.opencode/bin/opencode\" && npm install -g opencode-ai@latest",
     installPath: path.join(os.homedir(), ".opencode", "bin")
   }
 ];

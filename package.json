@@ -2,7 +2,7 @@
   "name": "codespaces-ai-cli-manager",
   "displayName": "Codespaces AI CLI Manager",
   "description": "Installs, updates, and launches Antigravity, OpenClaude, and OpenCode in GitHub Codespaces.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "ren42377",
   "license": "MIT",
   "repository": {

@@ -85,7 +85,7 @@ export class CliManager {
     try {
       const result = await this.runner.run(
         "bash",
-        ["-lc", `command -v ${definition.executable} >/dev/null 2>&1 && ${definition.executable} --version`],
+        ["-c", `command -v ${definition.executable} >/dev/null 2>&1 && ${definition.executable} --version`],
         this.terminalEnvironment
       );
       if (result.code !== 0) {
@@ -112,7 +112,7 @@ export class CliManager {
     this.events.info(`${reinstall ? "Reinstalling" : "Installing or updating"} ${definition.label}.`);
     const result = await this.runner.run(
       "bash",
-      ["-lc", definition.installCommand],
+      ["-c", definition.installCommand],
       this.terminalEnvironment
     );
     if (result.code !== 0) {

@@ -69,6 +69,7 @@ test("reports installed version", async () => {
   const statuses = await createManager(runner).status();
   assert.equal(statuses[0].installed, true);
   assert.equal(statuses[0].version, "1.2.3");
+  assert.deepEqual(runner.calls[0].args.slice(0, 1), ["-c"]);
 });
 
 test("reports a missing command", async () => {
@@ -86,6 +87,7 @@ test("installs a missing CLI even inside the daily interval", async () => {
   const updated = await createManager(runner, state).runScheduledUpdate();
   assert.equal(updated, true);
   assert.equal(runner.calls.length, 3);
+  assert.deepEqual(runner.calls[1].args, ["-c", "install-opencode"]);
 });
 
 test("skips a recent successful update when all CLIs exist", async () => {

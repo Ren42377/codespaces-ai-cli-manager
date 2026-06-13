@@ -16,7 +16,7 @@ The official installation methods are used:
 
 - Antigravity: `curl -fsSL https://antigravity.google/cli/install.sh | bash`
 - OpenClaude: `npm install -g @gitlawb/openclaude@latest`
-- OpenCode: `curl -fsSL https://opencode.ai/install | bash`
+- OpenCode: `npm install -g opencode-ai@latest`
 
 Antigravity's executable is named `agy`.
 
