@@ -64,7 +64,7 @@
   "scripts": {
     "compile": "tsc -p .",
     "check": "tsc -p . --noEmit",
-    "test": "npm run compile && node --test --test-isolation=none out/test/*.test.js",
+    "test": "npm run compile && node --test out/test/*.test.js",
     "package": "npm run compile && vsce package --no-dependencies"
   },
   "devDependencies": {
